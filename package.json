@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "shx rm -rf dist && tsc",
-    "prepublish": "shx rm -rf dist && tsc"
+    "prepublish": "shx rm -rf dist && tsc && chmod +x ./dist/src/index.js"
   },
   "dependencies": {
     "assertate": "^2.3.2",
