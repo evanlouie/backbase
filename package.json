@@ -1,6 +1,6 @@
 {
   "name": "base64up",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Tool to backup your filesystem to a flat JSON file",
   "bin": "./dist/src/index.js",
   "main": "./dist/src/index.js",
