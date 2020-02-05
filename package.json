@@ -1,0 +1,27 @@
+{
+  "name": "base64up",
+  "version": "0.0.1",
+  "description": "Tool to backup your filesystem to a flat JSON file",
+  "bin": "./dist/src/index.js",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "repository": "git@github.com:evanlouie/base64up.git",
+  "author": "Evan Louie <evan.louie@microsoft.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc",
+    "prepublish": "shx rm -rf dist && tsc"
+  },
+  "dependencies": {
+    "assertate": "^2.3.2",
+    "fast-glob": "^3.1.1",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@types/yargs": "^15.0.3",
+    "prettier": "^1.19.1",
+    "shx": "^0.3.2",
+    "typescript": "^3.7.5"
+  }
+}
