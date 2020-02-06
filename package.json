@@ -12,6 +12,10 @@
     "build": "shx rm -rf dist && tsc",
     "prepublish": "shx rm -rf dist && tsc && chmod +x ./dist/src/index.js"
   },
+  "prettier": {
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
   "dependencies": {
     "assertate": "^2.3.2",
     "fast-glob": "^3.1.1",
