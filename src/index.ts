@@ -11,15 +11,14 @@ import { wrapError } from "./error-handling";
 // main
 ////////////////////////////////////////////////////////////////////////////////
 let supportedFormats = ["json", "csv", "tsv"] as const;
+type SupportedFormats = typeof supportedFormats[number];
 
 /**
  * Type-guard to ensure that the given format is a supported serialization type
  *
  * @param format format string to check if is a supported export format
  */
-function isSupportedType(
-  format: unknown,
-): format is typeof supportedFormats[number] {
+function isSupportedType(format: unknown): format is SupportedFormats {
   return (
     typeof format === "string" &&
     supportedFormats.filter((supported) => format === supported).length === 1
