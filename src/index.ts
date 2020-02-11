@@ -18,9 +18,9 @@ let supportedFormats = <const>["json", "csv", "tsv"];
  *
  * @param format format string to check if is a supported export format
  */
-function isSupportedType<T = typeof supportedFormats[number]>(
+function isSupportedType(
   format: unknown,
-): format is T {
+): format is typeof supportedFormats[number] {
   return (
     typeof format === "string" &&
     supportedFormats.filter((supported) => format === supported).length === 1
