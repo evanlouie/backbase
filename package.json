@@ -7,7 +7,7 @@
   "author": "Evan Louie <evan.louie@microsoft.com>",
   "license": "MIT",
   "scripts": {
-    "build": "shx rm -rf dist && webpack && shx chmod +x ./dist/base64up.js",
+    "build": "tsc && shx rm -rf dist && webpack && shx chmod +x ./dist/base64up.js",
     "prepublish": "npm run build"
   },
   "prettier": {
