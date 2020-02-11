@@ -2,15 +2,13 @@
   "name": "base64up",
   "version": "0.0.7",
   "description": "Tool to backup your filesystem to a flat JSON file",
-  "bin": "./dist/src/index.js",
-  "main": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "bin": "./dist/base64up.js",
   "repository": "git@github.com:evanlouie/base64up.git",
   "author": "Evan Louie <evan.louie@microsoft.com>",
   "license": "MIT",
   "scripts": {
-    "build": "shx rm -rf dist && tsc",
-    "prepublish": "shx rm -rf dist && tsc && chmod +x ./dist/src/index.js"
+    "build": "shx rm -rf dist && webpack && shx chmod +x ./dist/base64up.js",
+    "prepublish": "npm run build"
   },
   "prettier": {
     "trailingComma": "all",
@@ -22,10 +20,16 @@
     "yargs": "^15.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
     "@types/node": "^13.7.0",
     "@types/yargs": "^15.0.3",
+    "babel-loader": "^8.0.6",
     "prettier": "^1.19.1",
     "shx": "^0.3.2",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^4.0.0-beta.2"
   }
 }

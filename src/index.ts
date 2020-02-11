@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import fs from "fs";
 import path from "path";
 import Yargs from "yargs";
@@ -11,7 +10,7 @@ import { wrapError } from "./error-handling";
 ////////////////////////////////////////////////////////////////////////////////
 // main
 ////////////////////////////////////////////////////////////////////////////////
-let supportedFormats = <const>["json", "csv", "tsv"];
+let supportedFormats = ["json", "csv", "tsv"] as const;
 
 /**
  * Type-guard to ensure that the given format is a supported serialization type
